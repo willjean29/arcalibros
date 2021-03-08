@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#33497c" />
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#33497c" />
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#33497c" />
+    <meta name="author" content="flyweedme, marcelo, codechappie" />
+    <meta
+      name="keywords"
+      content="arca de papel, editorial, ediciones, editorial peruana, editorial arca de papel, librerias, inicial, primaria, secundaria, libros escolares, textos escolares, libro, libros, catalogo, catalogo de libros, catalogo de textos escolares, lima, provincia, libreria, texto, puntos de venta"
+    />
+    <meta
+      name="description"
+      content="Arca virtual, una plataforma desarrollada en Arca de Papel. Una editorial especializada en la producción de textos escolares. Nuestros libros cuentan con actividades y ejercicios, dirigidos a Inicial, Primaria y Secundaria."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Arca virtual" />
+    <!-- <meta property="og:url" content="https://arcavirtual.net" /> -->
+    <meta
+      property="og:image"
+      content="https://arcadepapel.net/assets/images/logo.png"
+    />
+    <meta
+      property="og:description"
+      content="Arca virtual, una plataforma desarrollada en Arca de Papel. Una editorial especializada en la producción de textos escolares."
+    />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:site_name" content="Arca virtual" />
+    <link rel="apple-touch-icon" href="./assets/images/logo.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <title>Arca virtual - Plataforma Arca de Papel</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500&family=Kumbh+Sans:wght@300;400;700&family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://codechappie.github.io/paintme/assets/css/paint_styles.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- <script src="https://transmision.arcavirtual.net/external_api.js"></script> -->
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!-- PaintMeApp Start here-->
+    <!-- <button id="paintme-button">
+      <img src="%PUBLIC_URL%/assets/icons/icons8_paint_palette.svg" alt="" />
+    </button> -->
+    <div id="paintme">
+      <!-- Navigation bar -->
+      <nav id="main-nav" class="navbar-paintme">
+        <div class="container-fluid">
+          <!-- Shapes -->
+          <ul id="shape-list" class="nav-paintme">
+            <li class="nav-item-paintme" data-shape="rectangle">
+              <a>
+                <img
+                  src="%PUBLIC_URL%/assets/icons/icons8_rectangle_stroked.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="nav-item-paintme" data-shape="oval">
+              <a>
+                <img
+                  src="%PUBLIC_URL%/assets/icons/icons8_ellipse_stroked.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="nav-item-paintme" data-shape="circle">
+              <a>
+                <img
+                  src="%PUBLIC_URL%/assets/icons/icons8_circled.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="nav-item-paintme" data-shape="line">
+              <a>
+                <img src="%PUBLIC_URL%/assets/icons/icons8_line.svg" alt="" />
+              </a>
+            </li>
+            <li class="nav-item-paintme" class="active" data-shape="lineList">
+              <a>
+                <img
+                  src="%PUBLIC_URL%/assets/icons/icons8_pencil_tip.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li
+              class="nav-item-paintme eraser"
+              class="active"
+              data-shape="eraseList"
+            >
+              <a>
+                <img src="%PUBLIC_URL%/assets/icons/icons8-erase.png" alt="" />
+              </a>
+            </li>
+            <li class="nav-item-paintme" class="texto" data-shape="text">
+              <a>
+                <img src="%PUBLIC_URL%/assets/icons/icons8_text.svg" alt="" />
+              </a>
+            </li>
+            <!-- <li class="nav-item-paintme" data-shape="move">
+            <a>
+              <img src="%PUBLIC_URL%/assets/icons/icons8_text.svg" alt="" />
+            </a>
+          </li> -->
+          </ul>
+          <!-- Settings -->
+          <ul id="settings-list" class="nav-paintme">
+            <li class="nav-item-paintme">
+              <a>
+                <input id="color-selector" type="color" />
+              </a>
+            </li>
+            <li class="nav-item-paintme">
+              <a data-toggle="modal" id="btn-size" class="btn-si">
+                <img
+                  src="%PUBLIC_URL%/assets/icons/icons8_positive_dynamic.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="nav-item-paintme">
+              <a id="btn-bg">
+                <img
+                  src="%PUBLIC_URL%/assets/icons/btn-whiteboard.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="nav-item-paintme">
+              <a id="fill-toggle" data-filled="no">
+                <img
+                  src="%PUBLIC_URL%/assets/icons/icons8_bring_forward.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+          <!-- IO -->
+          <ul id="io-list" class="nav-paintme">
+            <li class="nav-item-paintme">
+              <a id="img-save">
+                <img
+                  src="%PUBLIC_URL%/assets/icons/icons8_download_from_cloud.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="nav-item-paintme">
+              <a id="img-load">
+                <img
+                  src="%PUBLIC_URL%/assets/icons/icons8_upload_to_cloud.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+          <!-- Undo + Redo -->
+          <ul id="time-travel" class="nav-paintme">
+            <li class="nav-item-paintme">
+              <a id="img-clear">
+                <img src="%PUBLIC_URL%/assets/icons/icons8_file.svg" alt="" />
+              </a>
+            </li>
+            <li class="nav-item-paintme">
+              <a id="btn-undo">
+                <img src="%PUBLIC_URL%/assets/icons/icons8_undo.svg" alt="" />
+              </a>
+            </li>
+            <li class="nav-item-paintme">
+              <a id="btn-redo">
+                <img src="%PUBLIC_URL%/assets/icons/icons8_redo.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+
+          <ul id="extra-tools" class="nav-paintme">
+            <li class="nav-item-paintme">
+              <a class="btn-close">
+                <img src="%PUBLIC_URL%/assets/icons/closepaint.png" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Canvas -->
+      <div class="container-fluid">
+        <canvas id="canvas">
+          Tu navegador no soporta esta aplicación :(
+        </canvas>
+      </div>
+
+      <!-- Hidden modal for size adjustments -->
+      <div id="size-modal" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Modificar tamaños</h4>
+              <button
+                type="button"
+                class="close btn-close-modal-size abort"
+                data-dismiss="modal"
+              >
+                <img
+                  src="%PUBLIC_URL%/assets/icons/icons8_multiply.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="table" id="size-table">
+                <tbody>
+                  <tr id="font-row" data-value="36pt">
+                    <td>Tamaño de fuente</td>
+                    <td>
+                      <a class="decrease"> - </a>
+                    </td>
+                    <td class="value-data center">36pt</td>
+                    <td class="center">
+                      <a class="increase"> + </a>
+                    </td>
+                  </tr>
+                  <tr id="width-row" data-value="1">
+                    <td>Ancho de linea</td>
+                    <td>
+                      <a class="decrease"> - </a>
+                    </td>
+                    <td class="value-data center">10</td>
+                    <td class="center">
+                      <a class="increase"> + </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-close-modal-size abort">
+                Cancelar
+              </button>
+              <button type="button" class="btn btn-close-modal-size confirm">
+                Aplicar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="bg-modal" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Modificar tamaños</h4>
+              <button
+                type="button"
+                class="close btn-close-modal-bg abort"
+                data-dismiss="modal"
+              >
+                <img
+                  src="%PUBLIC_URL%/assets/icons/icons8_multiply.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="group-options">
+                <div id="opt1" class="button-card-option">
+                  <h3>Transparente</h3>
+                </div>
+                <div id="opt2" class="button-card-option"></div>
+                <div id="opt3" class="button-card-option"></div>
+                <div id="opt4" class="button-card-option"></div>
+                <div id="opt5" class="button-card-option"></div>
+                <div id="opt6" class="button-card-option"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PaintMeApp Finish here-->
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./serviceworker.js")
+            .then((reg) => console.log("Success: ", reg.scope))
+            .catch((error) => console.log("Failure: ", error));
+        });
+      }
+    </script>
+    <!-- Scripts for canvas -->
+    <script src="https://codechappie.github.io/paintme/assets/js/index.js"></script>
+    <script src="https://codechappie.github.io/paintme/assets/js/shapes.js"></script>
+    <script src="https://codechappie.github.io/paintme/assets/js/draw.js"></script>
+    <script src="https://codechappie.github.io/paintme/assets/js/test.js"></script>
+
+    <!-- JITSI API -->
+    <!-- <script src="https://transmision.arcavirtual.net/external_api.js"></script> -->
+    <script src='https://meet.jit.si/external_api.js'></script>
+  </body>
+</html>

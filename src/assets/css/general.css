@@ -1,0 +1,116 @@
+@font-face {
+  font-family: RalewayExtraBold;
+  src: url(../fonts/Raleway-ExtraBold.ttf);
+}
+@font-face {
+  font-family: RalewayBold;
+  src: url(../fonts/Raleway-Bold.ttf);
+}
+@font-face {
+  font-family: RalewaySemiBold;
+  src: url(../fonts/Raleway-SemiBold.ttf);
+}
+@font-face {
+  font-family: RalewayLight;
+  src: url(../fonts/Raleway-Light.ttf);
+}
+@font-face {
+  font-family: AcuminVariable;
+  src: url(../fonts/AcuminVariableConcept.otf);
+}
+@font-face {
+  font-family: JosefinaSans;
+  src: url(../fonts/JosefinSans-Regular.ttf);
+}
+@font-face {
+  font-family: Kohinor;
+  src: url(../fonts/Kohinoor.ttc);
+}
+@font-face {
+  font-family: MyriadProRegular;
+  src: url(../fonts/MyriadPro-Regular.otf);
+}
+@font-face {
+  font-family: MontserratSemiBold;
+  src: url(../fonts/Montserrat-SemiBold.otf);
+}
+
+
+
+
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  /* font-family: 'RalewaySemiBold', sans-serif; */
+  font-family: "Kumbh Sans", sans-serif;
+  /* font-weight: 350; */
+  -webkit-tap-highlight-color: transparent;
+}
+:root {
+  --box-shadow: 1px 1px 10px #0000000c;
+  --background-app: #f0f2f5;
+}
+/* #root{
+   z-index: 99;
+} */
+.arca-paintme {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: rgb(12, 12, 12);
+}
+
+.strong {
+  font-weight: bold;
+}
+
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background-app);
+}
+html{
+  overflow-x: hidden;
+  /* overflow-y: scroll; */
+}
+
+.violet {
+  background: indigo;
+}
+.green {
+  background: #00b118;
+}
+.blue {
+  background: #0052bd;
+}
+.red {
+  background: #cf0011;
+}
+.pink {
+  background: #d803d8;
+}
+.yellow {
+  background: #f0d800;
+}
+.skyblue {
+  background: #039aff;
+}

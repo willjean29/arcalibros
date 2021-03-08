@@ -1,0 +1,32 @@
+{
+  "name": "Arca virtual",
+  "short_name": "Arca virtual",
+  "theme_color": "#33497c",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": ".",
+  "start_url": ".",
+  "categories": ["editorial", "educación", "libros", "plataforma", "arca virtual"],
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "assets/images/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/images/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "assets/images/logo.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    }
+  ]
+}

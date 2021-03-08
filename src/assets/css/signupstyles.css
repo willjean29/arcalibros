@@ -1,0 +1,402 @@
+/*COLORS SET-UP*/
+.violet {
+    background: indigo;
+}
+.green {
+    background: #00b118;
+}
+/*COLORS SET-UP*/
+
+/* body{
+    overflow-x: hidden;
+} */
+
+.register-section{
+    width: 100vw;
+    margin: 0;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    overflow-x: hidden;
+    /* overflow-y: auto; */
+    /* background-image: url("../../assets/images/login-bg.png");
+    background-position: -5% top;
+    background-size: auto 100vh;
+    background-repeat: no-repeat; */
+}
+
+nav{
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px;
+    position: fixed;
+}
+.companyName img{
+    width: 180px;
+    text-align: center;
+}
+
+.title-type-user{
+    margin-bottom: 10px;
+    font-family: 'RalewaySemiBold';
+    color: #2E2D81;
+}
+
+/*CHANGE USER*/
+.change-user{
+    margin-bottom: 20px;
+    display: flex;
+}
+.change-user button{
+    height: 40px;
+    width: 120px;
+    margin: 0px 5px;
+    border-radius: 20px;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(22, 137, 231);
+    box-shadow: 1px 1px 3px rgba(70, 70, 70, 0.411);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    padding: 15px 14px 10px 14px ;
+    cursor: pointer;
+    font-family: JosefinaSans;
+    text-transform: uppercase;
+    font-size: .7rem;
+    transition: background .2s ease-in-out;
+}
+.change-user button:hover{
+    background-color: rgb(27, 125, 236);
+    color: #FFF;
+    transition: background .2s ease-in-out;
+}
+.change-user .active{
+    background-color: rgb(27, 125, 236);
+    color: #FFF;
+    transition: background .2s ease-in-out;
+}
+.change-user button i {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;    
+}
+
+
+/*REGISTER*/
+.image-lateral{
+    width: 60vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    /* z-index: 99; */
+    /* background: red; */
+    overflow: hidden;
+    /* position: relative; */
+}
+.image-lateral img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    /* opacity: 0;
+    transform: translateX(-100%); */
+    transition: all .6s ease-in-out;
+}
+.image-lateral img.active{
+    /* opacity: 1; */
+    /* transform: translateX(0%);
+    transition: all .6s ease-in-out; */
+} 
+
+.register-container{
+    /* z-index: 9; */
+    overflow-x: auto;
+    background-color: #fff;
+    width: 40vw;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.form-container{
+    padding: 40px 0;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+.registro-form .form-group i{
+    top: 15px;
+    font-size: 1rem;
+}
+.image-user img{
+    width: 80px;
+    margin-bottom: 15px;
+}
+form{
+    display: grid;
+    justify-items: center;
+    /* transition: all .5s ease-in-out; */
+    animation: fadeIn ease .5s;
+    -webkit-animation: fadeIn ease .5s;
+    -moz-animation: fadeIn ease .5s;
+    -o-animation: fadeIn ease .5s;
+    -ms-animation: fadeIn ease .5s;
+}
+
+
+
+
+/*ERROR*/
+.alert-error{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c80a0a;
+    color: #FFF;
+    width: 100%;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-family: 'JosefinaSans';
+    transition: display 5s ease-in-out;
+}
+.alert-error button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.alert-error i{
+    color: #FFF;
+}
+
+.register-container form input{
+    width: 300px;
+    padding: 10px 18px;
+    padding-top: 14px;
+    padding-right: 15px;
+    margin: 4px 0px;
+    border-radius: 100px;
+    border: none;
+    background: #f6f6f6;
+    font-size: 1.1em;
+    text-transform: none;
+    /* border: 1px solid #d3d3d3; */
+}
+form input::placeholder{
+    color: #797979;
+}
+.register-container form select{
+    width: 300px;
+    padding: 10px 20px;
+    padding-right: 44px;
+    margin: 4px 0px;
+    border-radius: 10px;
+    border: none;
+    background: #E6E7E8;
+}
+.react-datepicker select{
+    width: fit-content!important;
+}
+.form-group{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    /* flex-direction: column; */
+    margin-bottom: 4px;
+}
+.form-group label {
+    margin-left: 10px;
+    /* position: absolute; */
+    top: -2px;
+    z-index: 0;
+    background: #fff;
+    font-size: .9em;
+    color: #333;
+    padding: 0 5px;
+    border-radius: 100px;
+}
+.form-group i{
+    position: absolute;
+    font-size: 1.6rem;
+    right: 12px;
+    top: 8px;
+    color: #3b3b3b;
+}
+.remenber-me{
+    margin-top: 14px;
+    margin-bottom: 30px;
+    font-size: .9rem;
+    text-decoration: none;
+    color: #5a5a5a;
+}
+
+/**CHECKBOX*/
+.checkboxes{
+    border: none;
+    padding: 10px 0px;
+}
+
+/* Hide the default checkbox */
+.custom-sq input[type=checkbox] {
+    display: none;
+  }
+  
+  /* Draw our custom check box */
+  .custom-sq {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0px 6px;
+    display: inline-block;
+  }
+  .custom-sq label {
+    cursor: pointer;
+    font-family: JosefinaSans;
+  }
+  .custom-sq label:before {
+    display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+    content: "\00a0";
+    text-align: center;
+    background: #eee;
+  }
+  .custom-sq label:hover::before{
+    background: #aaa;
+  }
+  
+  /* On check */
+  .custom-sq input:checked ~ label:before {
+    content: "\2713";
+    background: #7950AE;
+    color: #fff;
+  }
+
+/*CHECKBOX*/
+
+
+
+
+.btn-register{
+    font-size: 1.2rem;
+    background-color: #7950AE;
+    color: #FFF;
+    font-family: 'JosefinaSans';
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.no-account{
+    font-size: .9rem;
+    text-decoration: none;
+    color: #5a5a5a;
+    margin-bottom: 5px;
+    font-family: JosefinaSans;
+}
+.create-account{
+    font-size: 1rem;
+    text-decoration: none;
+    color: #EE2A7B;
+    font-family: JosefinaSans;
+}
+
+/*Media*/
+
+@media screen and (max-width: 1124px){
+    .register-container{
+        background: #ffffff;
+    }
+    .form-container{
+        padding: 0;
+    }
+   nav{
+        position: relative;
+        width: 100vw;
+        height: 70px;
+        z-index: 9;
+        justify-content: center;
+        background: #fff;
+    }
+    .companyName img{
+        width: 100px;
+    }
+    .register-container{
+        padding-top: 90px;
+        padding-bottom: 30px;
+        width: 100vw;
+        height: auto;
+        background: #ffffff;
+    }
+}
+
+@media screen and (max-width: 768px){
+  
+    .image-user img {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+    form input {
+        width: 300px;
+        padding: 12px 16px;
+        padding-right: 40px;
+        border-radius: 10px;
+        background: #E6E7E8;
+    }
+    .form-group i{
+        position: absolute;
+        font-size: 1.4rem;
+        right: 20px;
+        top: 20px;
+        color: #3b3b3b;
+    }
+}
+
+
+
+
+    @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+
+    
+
+ @keyframes fadeImgBg {
+    0% {
+     opacity: .7;
+     /* transform: translateX(0%) */
+    }
+    100%{
+     opacity: 1;
+     /* transform: translateX(100%) */
+    }
+}
