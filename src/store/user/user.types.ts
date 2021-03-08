@@ -3,6 +3,7 @@ import { Student } from "./interfaces/student.interface";
 import { Teacher } from "./interfaces/teacher.interface";
 import { User } from "./interfaces/user.interface";
 
+//  url for users
 export const usersURL = "http://localhost:4000/users/";
 // export const usersURL = "https://meet.arcavirtual.net/users/";
 
