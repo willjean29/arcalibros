@@ -10,6 +10,8 @@ import { toast } from "react-toastify";
 import { changeSchool } from "../../store/user/user.actions";
 import SchoolDetail from "../school-detail/SchoolDetail";
 import { School } from "../../store/user/interfaces/school.interface";
+import ReactDatePicker from "react-datepicker";
+import moment from "moment";
 interface Props {
   setModalOpen: Dispatch<SetStateAction<boolean>>;
 }
@@ -17,7 +19,10 @@ interface Props {
 const ModalSelectSchool: React.FC<Props> = ({ setModalOpen }) => {
   const dispatch = useDispatch();
   let [schoolSelected, setSchoolSelected] = useState({} as School);
-
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [dni, setDni] = useState("");
+  const [startDate, setStartDate] = useState<any>(null);
   const [schoolName, setSchoolName] = useState("");
   const user = useSelector((state: RootStore) => state.user.user);
   const handleSchoolSelection = (
@@ -33,25 +38,44 @@ const ModalSelectSchool: React.FC<Props> = ({ setModalOpen }) => {
 
   const handleEditUserSchool = async (e: FormEvent) => {
     e.preventDefault();
-    const changeSchoolDto = {
+    // setModalOpen(false);
+    // return;
+    const updateUserDto = {
       userId: user?._id as string,
+      firstName,
+      lastName,
+      dni,
       schoolName,
       userType: user?.type as number,
+      birthday: moment(startDate).format("MM/DD/YYYY"),
     };
+    console.log(updateUserDto);
     try {
-      const res = await axios.post(
-        usersURL.concat("change-school"),
-        changeSchoolDto
-      );
-      if (res.data.user) {
+      const res = await axios.put(usersURL.concat("update"),updateUserDto);
+      if(res.data.user){
         dispatch(changeSchool(res.data.user));
-        toast.success("Salón cambiado con éxito");
+        toast.success("Usuario actualizado con éxito");
         setModalOpen(false);
       }
+      console.log(res);
     } catch (error) {
-      toast.error("Seleccione un salón");
+      toast.error("Error al actualizar usuario");
       console.log(error);
     }
+    // try {
+    //   const res = await axios.post(
+    //     usersURL.concat("change-school"),
+    //     changeSchoolDto
+    //   );
+    //   if (res.data.user) {
+    //     dispatch(changeSchool(res.data.user));
+    //     toast.success("Salón cambiado con éxito");
+    //     setModalOpen(false);
+    //   }
+    // } catch (error) {
+    //   toast.error("Seleccione un salón");
+    //   console.log(error);
+    // }
   };
   return (
     <>
@@ -59,16 +83,59 @@ const ModalSelectSchool: React.FC<Props> = ({ setModalOpen }) => {
       <div className="card-modal-general school">
         <img width="200px" src={imgLogo} alt="" />
         <h3 className="welcometo school">
-          Elija a que colegio pertenece para continuar
+          Actualize sus datos para continuar
         </h3>
-        <p>A continuación busque su colegio digitándolo</p>
+        <p>Complete los campos requeridos</p>
         <form className="form-select-school" onSubmit={handleEditUserSchool}>
+          <div className="form-group" style={{width: "100%"}}>
+            <input
+              type="text"
+              className=""
+              placeholder="Nombres"
+              onChange={(e) => setFirstName(e.target.value)}
+              value={firstName}
+            />
+            <i className="fa fa-user"></i>
+          </div>
+          <div className="form-group" style={{width: "100%"}}>
+            <input
+              type="text"
+              className=""
+              placeholder="Apellidos"
+              onChange={(e) => setLastName(e.target.value)}
+              value={lastName}
+            />
+            <i className="fa fa-user"></i>
+          </div>
+          <div className="form-group" style={{width: "100%"}}>
+            <ReactDatePicker
+              placeholderText="Fecha de nacimiento"
+              selected={startDate}
+              dateFormat={"dd/MM/yyyy"}
+              showMonthDropdown
+              showYearDropdown
+              dropdownMode="select"
+              onChange={(date) => setStartDate(date)}
+              isClearable={true}
+            />
+          </div>
+          <div className="form-group" style={{width: "100%"}}>
+            <input
+              type="text"
+              className=""
+              placeholder="DNI"
+              inputMode="numeric"
+              onChange={(e) => setDni(e.target.value)}
+              value={dni}
+            />
+            <i className="fa fa-user"></i>
+          </div>
           <AutoSuggestSchools onChangeInput={handleSchoolSelection} />
           {Object.keys(schoolSelected).length > 0 && (
             <SchoolDetail school={schoolSelected} />
           )}
           <button className="btn-modal large" type="submit">
-            Seleccionar colegio
+            Actualizar Datos
           </button>
         </form>
       </div>

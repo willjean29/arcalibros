@@ -131,10 +131,10 @@ const LoginPage = () => {
             <Modal modalOpen={modalOpenRecover}>
               <ModalRecoverPassword setModalOpen={setModalOpenRecover} />
             </Modal>
-            {/* <small className="no-account">¿Aún no tienes cuenta?</small>
+            <small className="no-account">¿Aún no tienes cuenta?</small>
             <Link to="/registro" className="create-account">
               Crear cuenta
-            </Link> */}
+            </Link>
           </form>
         </div>
       </div>

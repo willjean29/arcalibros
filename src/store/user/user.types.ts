@@ -5,7 +5,7 @@ import { User } from "./interfaces/user.interface";
 
 //  url for users
 export const usersURL = "http://localhost:4000/users/";
-// export const usersURL = "https://meet.arcavirtual.net/users/";
+// export const usersURL = "http://localhost:4000//users/";
 
 
 export const TEACHER_LOGIN = "TEACHER_LOGIN";

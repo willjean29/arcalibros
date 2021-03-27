@@ -55,14 +55,16 @@ const LibraryPage = () => {
               books
                 // .filter((book) => (book.book as Book).level === levelSelected)
                 .map((book, index) => (
-                  <BookPortrait
-                    key={index}
-                    book={book}
-                    bookName={`${(book.book as Book).name}`}
-                    imgPortrait={libraryUrl.concat(
-                      `${(book.book as Book).image}`
-                    )}
-                  />
+                  (book.book !== null) && (
+                    <BookPortrait
+                      key={index}
+                      book={book}
+                      bookName={`${(book.book as Book).name}`}
+                      imgPortrait={libraryUrl.concat(
+                        `${(book.book as Book).image}`
+                      )}
+                    />
+                  )
                 ))}
           </div>
         </div>
