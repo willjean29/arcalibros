@@ -36,27 +36,33 @@ const StartPage = () => {
 
       <div className="start-page-container global-container">
         <div className="two-components-logo">
-          {user?.type === UserType.TEACHER ? (
+        <CardButton
+            title="Recursos"
+            description="En construcción"
+            to="https://recursos.arcavirtual.net/"
+            imgCard={imgResources}
+          />
+          {/* {user?.type === UserType.TEACHER ? (
             <CreateRoomCard setModalOpen={setModalCreateClassroom} />
           ) : (
             <JoinClasssroom setModalOpen={setModalStudentJoin} />
-          )}
+          )} */}
           <SchoolLogo />
         </div>
 
         <div className="two-components">
-          <CardButtonModal
+          {/* <CardButtonModal
             title="Añadir libro"
             setModalOpen={setModalAddBook}
             description="Ingrese los códigos proporcionados"
             imgCard={imgBooks}
-          />
-          <CardButton
+          /> */}
+          {/* <CardButton
             title="Recursos"
             description="En construcción"
-            to="https://drive.arcavirtual.net/"
+            to="https://recursos.arcavirtual.net/"
             imgCard={imgResources}
-          />
+          /> */}
         </div>
       </div>
     </div>

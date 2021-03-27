@@ -121,20 +121,20 @@ const LoginPage = () => {
               <button className="btn-login" type="submit">
                 Iniciar sesión
               </button>
-              <button
+              {/* <button
                 className="btn-recover-password"
                 onClick={(e) => openModalRecover(e)}
               >
                 ¿Contraseña olvidada?
-              </button>
+              </button> */}
             </div>
-            <Modal modalOpen={modalOpenRecover}>
+            {/* <Modal modalOpen={modalOpenRecover}>
               <ModalRecoverPassword setModalOpen={setModalOpenRecover} />
-            </Modal>
-            <small className="no-account">¿Aún no tienes cuenta?</small>
+            </Modal> */}
+            {/* <small className="no-account">¿Aún no tienes cuenta?</small>
             <Link to="/registro" className="create-account">
               Crear cuenta
-            </Link>
+            </Link> */}
           </form>
         </div>
       </div>

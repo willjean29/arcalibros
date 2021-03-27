@@ -21,7 +21,7 @@
     "@types/react-redux": "^7.1.9",
     "@types/react-router-dom": "^5.1.5",
     "@types/socket.io-client": "^1.4.34",
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "moment": "^2.29.1",
     "public-ip": "^4.0.2",
     "react": "^16.13.1",

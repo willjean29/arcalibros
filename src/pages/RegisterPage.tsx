@@ -8,7 +8,7 @@ import RegisterNav from "../components/register/RegisterNav";
 import { UserType } from "../utils/enums";
 
 const RegisterPage = () => {
-  const [type, setType] = useState(UserType.STUDENT);
+  const [type, setType] = useState(UserType.TEACHER);
   return (
     <section className="register-section">
       <RegisterNav />
@@ -24,26 +24,23 @@ const RegisterPage = () => {
             <img src={userImage} alt="" />
           </div>
           <div className="change-user">
-            <button
+            {/* <button
               onClick={() => setType(UserType.TEACHER)}
               className={type === UserType.TEACHER ? "active" : ""}
             >
               Profesor
               <i className="fa fa-users"></i>
-            </button>
-            <button
+            </button> */}
+            {/* <button
               onClick={() => setType(UserType.STUDENT)}
               className={type === UserType.STUDENT ? "active" : ""}
             >
               Alumno
               <i className="fa fa-graduation-cap"></i>
-            </button>
+            </button> */}
           </div>
-          {type === UserType.TEACHER ? (
-            <RegisterTeacher />
-          ) : (
-            <RegisterStudent />
-          )}
+            <RegisterTeacher /> 
+            {/* <RegisterStudent /> */}
         </div>
       </div>
     </section>

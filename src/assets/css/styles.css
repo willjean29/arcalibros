@@ -4344,6 +4344,14 @@ header {
   flex-wrap: wrap;
   gap: 20px;
 }
+.library-page-container .books-container .no-books{
+  margin-top: 20px;
+}
+.library-page-container .books-container .no-books img{
+  max-width: 500px;
+  margin-top: 20px;
+  width: 100%;
+}
 
 .library-page-container .my-books {
   width: 100%;
@@ -4351,6 +4359,7 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 20px;
 }
 .library-page-container .books-container .book-portrait {
   display: flex;
