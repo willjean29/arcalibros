@@ -23,15 +23,15 @@ const RegistroDocente = (): JSX.Element => {
   const history = useHistory();
 
   const [email, setEmail] = useState("");
-  const [firstName, setFirstName] = useState("");
+  const [firstName, setFirstName] = useState("default");
   const [registerCode, setRegisterCode] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [dni, setDni] = useState("");
+  const [lastName, setLastName] = useState("default");
+  const [dni, setDni] = useState("73481441");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
-  const [levels, setLevels] = useState([] as string[]);
+  const [levels, setLevels] = useState(["Inicial", "Primaria", "Secundaria"] as string[]);
   const [errors, setNoErrors] = useState<any>(false);
-  const [startDate, setStartDate] = useState<any>(null);
+  const [startDate, setStartDate] = useState<Date>(new Date("01/01/2020"));
 
   useEffect(() => {
     if (errors === null) {
@@ -136,13 +136,13 @@ const RegistroDocente = (): JSX.Element => {
           <input
             type="email"
             className=""
-            placeholder="Email (usuario)"
+            placeholder="Correo electrónico"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
           />
           <i className="fa fa-at"></i>
         </div>
-        <div className="form-group">
+        {/* <div className="form-group">
           <input
             type="text"
             className=""
@@ -151,8 +151,8 @@ const RegistroDocente = (): JSX.Element => {
             value={firstName}
           />
           <i className="fa fa-user"></i>
-        </div>
-        <div className="form-group">
+        </div> */}
+        {/* <div className="form-group">
           <input
             type="text"
             className=""
@@ -161,9 +161,9 @@ const RegistroDocente = (): JSX.Element => {
             value={lastName}
           />
           <i className="fa fa-user"></i>
-        </div>
-        <div className="form-group">
-          {/* <label htmlFor="">Fecha de nacimiento</label> */}
+        </div> */}
+        {/* <div className="form-group">
+          <label htmlFor="">Fecha de nacimiento</label>
           <ReactDatePicker
             placeholderText="Fecha de nacimiento"
             selected={startDate}
@@ -174,8 +174,8 @@ const RegistroDocente = (): JSX.Element => {
             onChange={(date) => handleStartDate(date)}
             isClearable={true}
           />
-        </div>
-        <div className="form-group">
+        </div> */}
+        {/* <div className="form-group">
           <input
             type="text"
             className=""
@@ -185,7 +185,7 @@ const RegistroDocente = (): JSX.Element => {
             value={dni}
           />
           <i className="fa fa-user"></i>
-        </div>
+        </div> */}
         <div className="form-group">
           <input
             type="password"
@@ -207,7 +207,7 @@ const RegistroDocente = (): JSX.Element => {
           <i className="fa fa-lock"></i>
         </div>
 
-        <div className="checkboxes">
+        {/* <div className="checkboxes">
           <div className="custom-sq">
             <input
               type="checkbox"
@@ -238,9 +238,9 @@ const RegistroDocente = (): JSX.Element => {
             />
             <label htmlFor="box3">Secundaria</label>
           </div>
-        </div>
+        </div> */}
         <button className="btn-register" type="submit">
-          Registrarse
+          Registrar
         </button>
       </form>
       <small className="no-account">¿Tienes una cuenta?</small>
