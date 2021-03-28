@@ -7,7 +7,7 @@ type Props = {
 };
 
 const ModalRecoverPassword: React.FC<Props> = ({ setModalOpen }) => {
-  const recoverUrl = "http://localhost:4000/users/password/";
+  const recoverUrl = "https://meet.arcavirtual.net/users/password/";
   const [recoverEmail, setRecoverEmail] = useState("");
   const handleRecoverPassword = async (e: FormEvent) => {
     e.preventDefault();

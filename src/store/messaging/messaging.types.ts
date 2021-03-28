@@ -9,7 +9,7 @@ export const MESSAGE_UNLOAD = "MESSAGE_UNLOAD";
 export const MESSAGE_SET_READ = "MESSAGE_SET_READ";
 export const MESSAGE_RECEIVE_NEW = "MESSAGE_RECEIVE_NEW";
 export const MESSAGE_SEND_ERROR = "MESSAGE_SEND_ERROR";
-export const messagingURL = "http://localhost:4000/messaging/";
+export const messagingURL = "https://meet.arcavirtual.net/messaging/";
 
 export interface NewMessage {
   type: typeof MESSAGE_NEW;

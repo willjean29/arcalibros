@@ -147,7 +147,7 @@ const PostFieldTopic: React.FC<PostFieldProps> = ({ imgUser, topicId }) => {
             type,
             comment,
             ...(link ? { link: finalContent } : undefined),
-            file: `<a href="http://localhost:4000/classrooms/download/${topicId}&${hour}${newFile.name}" target="_blank">${newFile.name}</a>`,
+            file: `<a href="https://meet.arcavirtual.net/classrooms/download/${topicId}&${hour}${newFile.name}" target="_blank">${newFile.name}</a>`,
             date: moment().locale("es").format("LLL"),
             profileImg: profileImg !== "default" ? profileImg : "default",
           };

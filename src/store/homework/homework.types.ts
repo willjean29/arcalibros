@@ -1,7 +1,7 @@
 import { Excercise } from "../excercise/interfaces/exercise.interface";
 import { Homework } from "./interfaces/homework.interface";
 
-export const homeworkURL = "http://localhost:4000/evaluations/homework/";
+export const homeworkURL = "https://meet.arcavirtual.net/evaluations/homework/";
 export const HOMEWORK_CREATE = "HOMEWORK_CREATE";
 export const HOMEWORK_ADD_EXCERCISE = "HOMEWORK_ADD_EXCERCISE";
 export const HOMEWORK_DELETE_EXCERCISE = "HOMEWORK_DELETE_EXCERCISE";

@@ -129,7 +129,7 @@ export const loadProfileImage = (profileId: string) => async (
 
     dispatch({
       type: USER_LOAD_PROFILE,
-      payload: `http://localhost:4000/users/profile/${profileId}`,
+      payload: `https://meet.arcavirtual.net/users/profile/${profileId}`,
     });
   } catch (error) {
     dispatch({
@@ -160,7 +160,7 @@ export const updateProfileImage = (profileImg: any) => async (
     if (res.data.profileImg) {
       dispatch({
         type: USER_CHANGE_PROFILE,
-        payload: `http://localhost:4000/users/profile/${profileId}`,
+        payload: `https://meet.arcavirtual.net/users/profile/${profileId}`,
       });
       document.location.reload();
     }

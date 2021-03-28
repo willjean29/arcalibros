@@ -33,7 +33,7 @@ const ModalConfirmChangePassword: React.FC<Props> = ({
     if (confirm.toLowerCase() === "confirmar") {
       try {
         const res = await axios.post(
-          "http://localhost:4000/users/password",
+          "https://meet.arcavirtual.net/users/password",
           changePasswordDto
         );
         if (res.data.message) {

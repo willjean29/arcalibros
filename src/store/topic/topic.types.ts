@@ -7,7 +7,7 @@ export const TOPIC_CREATE_ERROR = "TOPIC_CREATE_ERROR";
 export const TOPIC_UPDATE = "TOPIC_UPDATE";
 export const TOPIC_ADD_COMMENT = "TOPIC_ADD_COMMENT";
 export const TOPIC_DELETE_COMMENT = "TOPIC_DELETE_COMMENT";
-export const topicsUrl = "http://localhost:4000/topics/";
+export const topicsUrl = "https://meet.arcavirtual.net/topics/";
 export interface TopicNew {
   type: typeof TOPIC_NEW;
   payload: Topic;

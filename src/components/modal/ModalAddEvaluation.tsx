@@ -61,7 +61,7 @@ const ModalAddEvaluation: React.FC<Props> = ({ setModalOpen }) => {
 
       try {
         const res = await axios.post(
-          "http://localhost:4000/evaluations/exam/classroom",
+          "https://meet.arcavirtual.net/evaluations/exam/classroom",
           examClassroomDto
         );
 

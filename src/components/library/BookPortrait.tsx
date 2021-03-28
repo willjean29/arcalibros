@@ -35,7 +35,7 @@ const BookPortrait: React.FC<Props> = ({ imgPortrait, book, bookName }) => {
     e.preventDefault();
     open(
       "POST",
-      "http://localhost:4000/books/serve",
+      "https://meet.arcavirtual.net/books/serve",
       {
         code: book.code,
         user: book.user as string,
@@ -45,7 +45,7 @@ const BookPortrait: React.FC<Props> = ({ imgPortrait, book, bookName }) => {
   };
   return (
     <a
-      href="http://localhost:4000/books/serve"
+      href="https://meet.arcavirtual.net/books/serve"
       target="_blank"
       rel="noopener noreferrer"
       className="book-portrait"

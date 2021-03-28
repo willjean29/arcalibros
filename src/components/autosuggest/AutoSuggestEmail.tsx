@@ -19,7 +19,7 @@ const AutoSuggestEmail: React.FC<IProps> = ({ onChangeInput, actualValue }) => {
 
   const loadUsers = async () => {
     try {
-      const res = await axios.get(`http://localhost:4000/users/${schoolName}`);
+      const res = await axios.get(`https://meet.arcavirtual.net/users/${schoolName}`);
 
       setUsers(res.data.users);
     } catch (error) {

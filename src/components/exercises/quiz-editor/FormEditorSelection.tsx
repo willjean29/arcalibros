@@ -157,7 +157,7 @@ const FormEditorSelection = () => {
             course,
             selectionAnswer: alternatives[selectedIndex].text,
             teacher,
-            photo: `http://localhost:4000/excercises/excercise-image/${res.data.photo}`,
+            photo: `https://meet.arcavirtual.net/excercises/excercise-image/${res.data.photo}`,
           };
           try {
             const res = await axios.post(excercisesUrl, excerciseDto);

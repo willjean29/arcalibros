@@ -4,7 +4,7 @@ export const EXCERCISE_CREATE = "EXCERCISE_CREATE";
 export const EXCERCISE_LOAD = "EXCERCISE_LOAD";
 export const EXCERCISE_FLAG = "EXCERCISE_FLAG";
 
-export const excercisesUrl = "http://localhost:4000/excercises/";
+export const excercisesUrl = "https://meet.arcavirtual.net/excercises/";
 
 export interface ExcerciseCreate {
   type: typeof EXCERCISE_CREATE;

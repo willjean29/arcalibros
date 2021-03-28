@@ -1,11 +1,11 @@
 import io from "socket.io-client";
 export const socket = {
-  users: io("http://localhost:4000/users", { transports: ["websocket"] }),
-  classrooms: io("http://localhost:4000/classrooms", {
+  users: io("https://meet.arcavirtual.net/users", { transports: ["websocket"] }),
+  classrooms: io("https://meet.arcavirtual.net/classrooms", {
     transports: ["websocket"],
   }),
-  messaging: io("http://localhost:4000/messaging", {
+  messaging: io("https://meet.arcavirtual.net/messaging", {
     transports: ["websocket"],
   }),
-  topics: io("http://localhost:4000/topics", { transports: ["websocket"] }),
+  topics: io("https://meet.arcavirtual.net/topics", { transports: ["websocket"] }),
 };
