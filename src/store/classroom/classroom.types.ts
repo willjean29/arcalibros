@@ -3,8 +3,8 @@ import { ClassroomComment } from "./interfaces/classroom-comment.interface";
 import { ClassroomEvent } from "./interfaces/classroom-events.interface";
 import { Classroom } from "./interfaces/classroom.interface";
 
-export const classroomsURL = "https://meet.arcavirtual.net/classrooms/";
-export const eventsURL = "https://meet.arcavirtual.net/events/";
+export const classroomsURL = "http://localhost:4000/classrooms/";
+export const eventsURL = "http://localhost:4000/events/";
 
 export const CLASSROOM_SELECT = "CLASSROOM_SELECT";
 export const CLASSROOM_SUSCRIBE = "CLASSROOM_SUSCRIBE";

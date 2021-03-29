@@ -103,7 +103,7 @@ const ModalRedactEmail: React.FC<Props> = ({ setModalOpen }) => {
             read: false,
             sender,
             subject,
-            file: `<a href="https://meet.arcavirtual.net/messaging/download/${hour}${res.data.file}" target="_blank">${newFile.name}</a>`,
+            file: `<a href="http://localhost:4000/messaging/download/${hour}${res.data.file}" target="_blank">${newFile.name}</a>`,
             date: moment().locale("es").format("LLL"),
           };
           const res2 = await axios.post(messagingURL, messageDto);

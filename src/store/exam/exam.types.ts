@@ -6,7 +6,7 @@ import { AnswerExcercise } from "./interfaces/answer-excercise.interface";
 import { ExamClassroom } from "./interfaces/exam-classroom.interface";
 import { Exam } from "./interfaces/exam.interface";
 
-export const examURL = "https://meet.arcavirtual.net/evaluations/exam/";
+export const examURL = "http://localhost:4000/evaluations/exam/";
 
 export const EXAM_CREATE = "EXAM_CREATE";
 export const EXAM_ADD_EXCERCISE = "EXAM_ADD_EXCERCISE";

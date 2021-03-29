@@ -21,6 +21,9 @@ const ModalSelectSchool: React.FC<Props> = ({ setModalOpen }) => {
   let [schoolSelected, setSchoolSelected] = useState({} as School);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [departament, setDepartament] = useState("");
   const [dni, setDni] = useState("");
   const [startDate, setStartDate] = useState<any>(null);
   const [schoolName, setSchoolName] = useState("");
@@ -45,11 +48,15 @@ const ModalSelectSchool: React.FC<Props> = ({ setModalOpen }) => {
       firstName,
       lastName,
       dni,
+      emailUser: email,
+      phone,
+      departament,
       schoolName,
       userType: user?.type as number,
       birthday: moment(startDate).format("MM/DD/YYYY"),
     };
     console.log(updateUserDto);
+    // return;
     try {
       const res = await axios.put(usersURL.concat("update"),updateUserDto);
       if(res.data.user){
@@ -127,6 +134,37 @@ const ModalSelectSchool: React.FC<Props> = ({ setModalOpen }) => {
               inputMode="numeric"
               onChange={(e) => setDni(e.target.value)}
               value={dni}
+            />
+            <i className="fa fa-user"></i>
+          </div>
+          <div className="form-group" style={{width: "100%"}}>
+            <input
+              type="email"
+              className=""
+              placeholder="Correo Electrónico"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+            />
+            <i className="fa fa-user"></i>
+          </div>
+          <div className="form-group" style={{width: "100%"}}>
+            <input
+              type="text"
+              className=""
+              placeholder="Celular"
+              inputMode="numeric"
+              onChange={(e) => setPhone(e.target.value)}
+              value={phone}
+            />
+            <i className="fa fa-user"></i>
+          </div>
+          <div className="form-group" style={{width: "100%"}}>
+            <input
+              type="text"
+              className=""
+              placeholder="Departamento"
+              onChange={(e) => setDepartament(e.target.value)}
+              value={departament}
             />
             <i className="fa fa-user"></i>
           </div>

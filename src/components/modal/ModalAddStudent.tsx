@@ -38,7 +38,7 @@ const ModalAddStudent: React.FC<Props> = ({
     e.preventDefault();
     setLoading(true);
     if (loading) return;
-    const addUserUrl = "https://meet.arcavirtual.net/classrooms/addstudent/";
+    const addUserUrl = "http://localhost:4000/classrooms/addstudent/";
     const messageText = `<p> Estimado alumno el profesor ${teacherName} te invita a unirte al salon de clases del curso  de  ${course}- ${grade}° ${section} </p> para unirte haz click en el siguiente enlace: <a href="${addUserUrl.concat(
       classroomId + "CAMBIO"
     )}" target="_blank"> UNIRSE AL SALON </a>`;
