@@ -55,8 +55,6 @@ const ModalSelectSchool: React.FC<Props> = ({ setModalOpen }) => {
       userType: user?.type as number,
       birthday: moment(startDate).format("MM/DD/YYYY"),
     };
-    // console.log(updateUserDto);
-    // return;
     try {
       const res = await axios.put(usersURL.concat("update"),updateUserDto);
       if(res.data.user){
