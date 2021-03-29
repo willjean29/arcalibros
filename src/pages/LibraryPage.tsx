@@ -23,7 +23,7 @@ const LibraryPage = () => {
   return (
     <div className="library-page">
       <div className="library-page-container global-container">
-        {/* <NavbarBooks /> */}
+        <NavbarBooks />
 
         {/* <div className="level-course-container">
           <h2>Selecciona tu nivel educativo</h2>

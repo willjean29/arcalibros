@@ -51,7 +51,7 @@ const LoginPage = () => {
   };
   useEffect(() => {
     if (user) {
-      history.push("/plataforma");
+      history.push("/plataforma/libros");
       dispatch(loadClassrooms());
       //load messages numero de no leidos en sidebar
       dispatch({ type: USER_LOGIN_ERROR, payload: null });
