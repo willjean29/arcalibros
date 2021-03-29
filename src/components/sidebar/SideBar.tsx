@@ -96,14 +96,14 @@ const SideBar: React.FC<Props> = ({ setSidebarOpen }) => {
         />
         <div className="card-menu-items">
           <div className="items-container">
-            <SidebarItemSelection
+            {/* <SidebarItemSelection
               name="Inicio"
               path="/plataforma"
               img={imgHome}
               style={`item ${selectedItem === SidebarItem.Home && "active"}`}
               click={(e) => handleSelectItem(e, SidebarItem.Home)}
             />
-            {/* <div className="item-container">
+            <div className="item-container">
               <div
                 className={`item ${
                   selectedItem === SidebarItem.Classrooms && "active"
