@@ -17,7 +17,7 @@ const AutoSuggestSchools: React.FC<IProps> = ({ onChangeInput }) => {
 
   const loadSchools = async () => {
     try {
-      const res = await axios.get("https://meet.arcavirtual.net/users/schools/");
+      const res = await axios.get("http://localhost:4000/users/schools/");
       const filteredSchools = res.data.schools.filter(
         (school: School) => school.name !== "default"
       );
