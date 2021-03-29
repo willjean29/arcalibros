@@ -90,11 +90,11 @@ const SideBar: React.FC<Props> = ({ setSidebarOpen }) => {
   return (
     <>
       <div className="side-menu">
-        <SideBarCard
+        {/* <SideBarCard
           firstName={user?.firstName}
           lastName={user?.lastName}
           imgUser={profileImg !== "default" ? profileImg : imgUser}
-        />
+        /> */}
         <div className="card-menu-items">
           <div className="items-container">
             {/* <SidebarItemSelection

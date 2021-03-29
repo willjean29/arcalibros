@@ -74,7 +74,7 @@ const UserDropdown: React.FC<Props> = ({setDropdownOpen}) => {
         </div>
       </a> */}
       <hr />
-      <Link
+     {/* <Link
         to="/plataforma/ajustes"
         onClick={closeDropdown}
         className="dw-item border-top color-light-grey"
@@ -91,7 +91,7 @@ const UserDropdown: React.FC<Props> = ({setDropdownOpen}) => {
           <img src={imgArrowRight} alt="" />
         </div>
       </Link>
-      {/* <a
+       <a
         href="mailto:soporteplataforma@arcadepapel.net"
         onClick={closeDropdown}
         className="dw-item border-top color-light-grey"

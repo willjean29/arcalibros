@@ -80,7 +80,7 @@ const NavBar = () => {
           </div>
         </div>
         <button className="left-content">
-          <div className="btn-profile-user">
+         {/* <div className="btn-profile-user">
             <div className="profile-image">
               <img
                 src={profileImg !== "default" ? profileImg : imgUser}
@@ -92,7 +92,7 @@ const NavBar = () => {
             <h6>{user?.firstName.concat(" " + user.lastName)}</h6>
           </div>
 
-          {/* <div className="myDateTime">
+           <div className="myDateTime">
             <div className="date">
               <h3>{setDay()}</h3>
               <h3 className="month">{setMonth()}</h3>
