@@ -19,7 +19,7 @@ nav{
     z-index: 99999;
 }
 .companyName img{
-    width: 180px;
+    width: 80px;
     z-index: 999999;
 }
 
@@ -162,7 +162,7 @@ form input::placeholder{
         background: #fff;
     }
     .companyName img{
-        width: 100px;
+        width: 60px;
     }
     .login-container{
         padding-top: 90px;

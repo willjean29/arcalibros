@@ -1,5 +1,5 @@
 import React, { Dispatch, FormEvent, SetStateAction, useState } from "react";
-import imgLogo from "../../assets/images/logo.png";
+import imgLogo from "../../assets/images/logo1.png";
 import imgClose from "../../assets/images/btn-close.png";
 import AutoSuggestSchools from "../autosuggest/AutoSuggestSchools";
 import { RootStore } from "../../store/store";
