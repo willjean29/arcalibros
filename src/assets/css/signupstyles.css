@@ -328,6 +328,7 @@ form input::placeholder{
     }
     .companyName img{
         width: 100px;
+        margin-top: 60px;
     }
     .register-container{
         padding-top: 90px;
