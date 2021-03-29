@@ -47,7 +47,7 @@ const LibraryPage = () => {
           {/* <h2>Mis libros {levelSelected !== "" ? `de ${levelSelected}` : '' }</h2> */}
           <h1>Mis libros</h1>
           <div className="books-container">
-            {books.length > 1 ? (
+            {books.length > 0 ? (
               books.map(
                 (book, index) =>
                   book.book !== null && (
