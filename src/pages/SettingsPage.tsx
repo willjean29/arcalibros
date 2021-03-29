@@ -22,11 +22,11 @@ const SettingsPage = () => {
             <SettingsMainTitle img={imgSchoolLogo} title="Logo Escolar" />
             <UploadSchoolLogo />
           </div> */}
-
+{/* 
           <div className="settings-global-card">
             <SettingsMainTitle img={imgPassword} title="Cambiar contraseña" />
             <ChangePassword />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

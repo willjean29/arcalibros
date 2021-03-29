@@ -54,6 +54,7 @@ const SideBar: React.FC<Props> = ({ setSidebarOpen }) => {
   const profileImg = useSelector(
     (state: RootStore) => state.user.profileImg
   ) as string;
+  
   const handleSelectItem = (e: MouseEvent, itemSelected: string) => {
     dispatch({
       type: SIDEBAR_SELECT_ITEM,
@@ -230,11 +231,11 @@ const SideBar: React.FC<Props> = ({ setSidebarOpen }) => {
             </div> */}
           </div>
           <div className="menu-footer">
-            <div className="support-cener">
+            {/* <div className="support-cener">
               <a href="mailto:soporteplataforma@arcadepapel.net">
                 <h6>Centro de ayuda</h6>
               </a>
-            </div>
+            </div> */}
             <div className="social-networking-sites">
               <a
                 href="https://www.facebook.com/editorialarcadepapel/"

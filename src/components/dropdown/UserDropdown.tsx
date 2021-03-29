@@ -50,13 +50,13 @@ const UserDropdown: React.FC<Props> = ({setDropdownOpen}) => {
           <a className="name-user strong">
             {user?.firstName.concat(" " + user?.lastName)}
           </a>
-          <a className="type-user">
+          {/* <a className="type-user">
             {user?.type === UserType.TEACHER ? "Profesor" : "Estudiante"}
-          </a>
+          </a> */}
         </div>
       </div>
-      <hr />
-      <a
+     {/* <hr />
+       <a
         href="mailto:soporteplataforma@arcadepapel.net"
         onClick={closeDropdown}
         className="dw-item border-top color-light-grey"
@@ -72,7 +72,7 @@ const UserDropdown: React.FC<Props> = ({setDropdownOpen}) => {
             </p>
           </div>
         </div>
-      </a>
+      </a> */}
       <hr />
       <Link
         to="/plataforma/ajustes"
@@ -91,7 +91,7 @@ const UserDropdown: React.FC<Props> = ({setDropdownOpen}) => {
           <img src={imgArrowRight} alt="" />
         </div>
       </Link>
-      <a
+      {/* <a
         href="mailto:soporteplataforma@arcadepapel.net"
         onClick={closeDropdown}
         className="dw-item border-top color-light-grey"
@@ -107,7 +107,7 @@ const UserDropdown: React.FC<Props> = ({setDropdownOpen}) => {
         <div className="circle-container">
           <img src={imgArrowRight} alt="" />
         </div>
-      </a>
+      </a> */}
       <Link
         to="/"
         onClick={handleLogout}

@@ -23,7 +23,7 @@ const SideBarCard: React.FC<IProps> = ({ imgUser, firstName, lastName }) => {
         <h3 title={`${firstName} ${lastName}`}>
           {firstName} {lastName}
         </h3>
-        <small>{userType === UserType.TEACHER ? "Profesor" : "Alumno"}</small>
+        {/* <small>{userType === UserType.TEACHER ? "Profesor" : "Alumno"}</small> */}
         <small title={email}>{email}</small>
       </div>
     </div>

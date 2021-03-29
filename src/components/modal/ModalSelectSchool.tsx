@@ -49,7 +49,7 @@ const ModalSelectSchool: React.FC<Props> = ({ setModalOpen }) => {
       userType: user?.type as number,
       birthday: moment(startDate).format("MM/DD/YYYY"),
     };
-    console.log(updateUserDto);
+    // console.log(updateUserDto);
     try {
       const res = await axios.put(usersURL.concat("update"),updateUserDto);
       if(res.data.user){
@@ -57,7 +57,7 @@ const ModalSelectSchool: React.FC<Props> = ({ setModalOpen }) => {
         toast.success("Usuario actualizado con éxito");
         setModalOpen(false);
       }
-      console.log(res);
+      // console.log(res);
     } catch (error) {
       toast.error("Error al actualizar usuario");
       console.log(error);

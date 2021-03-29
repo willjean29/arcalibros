@@ -43,8 +43,10 @@ const LoginPage = () => {
 
   const handleLogin = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    let newEmail = `${email}@gmail.com`;
     const loginDto = {
-      email,
+      email: newEmail,
       password,
     };
     dispatch(loginUser(loginDto));
@@ -97,9 +99,9 @@ const LoginPage = () => {
             </div>
             <div className="form-group">
               <input
-                type="email"
+                type="text"
                 className="form-control mb-2"
-                placeholder="Email"
+                placeholder="Usuario"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
               />

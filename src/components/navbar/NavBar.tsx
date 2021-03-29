@@ -92,13 +92,13 @@ const NavBar = () => {
             <h6>{user?.firstName.concat(" " + user.lastName)}</h6>
           </div>
 
-          <div className="myDateTime">
+          {/* <div className="myDateTime">
             <div className="date">
               <h3>{setDay()}</h3>
               <h3 className="month">{setMonth()}</h3>
             </div>
             <h3>{setHour()}</h3>
-          </div>
+          </div> */}
 
           <div
             className="btn-dropdown"
