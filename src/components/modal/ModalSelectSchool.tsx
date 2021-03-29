@@ -55,6 +55,9 @@ const ModalSelectSchool: React.FC<Props> = ({ setModalOpen }) => {
       userType: user?.type as number,
       birthday: moment(startDate).format("MM/DD/YYYY"),
     };
+
+    console.log(updateUserDto);
+    // return;
     try {
       const res = await axios.put(usersURL.concat("update"),updateUserDto);
       if(res.data.user){
@@ -166,10 +169,20 @@ const ModalSelectSchool: React.FC<Props> = ({ setModalOpen }) => {
             />
             <i className="fa fa-user"></i>
           </div>
-          <AutoSuggestSchools onChangeInput={handleSchoolSelection} />
+          <div className="form-group" style={{width: "100%"}}>
+            <input
+              type="text"
+              className=""
+              placeholder="Ingresar Colegio"
+              onChange={(e) => setSchoolName(e.target.value)}
+              value={schoolName}
+            />
+            <i className="fa fa-user"></i>
+          </div>
+          {/* <AutoSuggestSchools onChangeInput={handleSchoolSelection} />
           {Object.keys(schoolSelected).length > 0 && (
             <SchoolDetail school={schoolSelected} />
-          )}
+          )} */}
           <button className="btn-modal large" type="submit">
             Actualizar Datos
           </button>

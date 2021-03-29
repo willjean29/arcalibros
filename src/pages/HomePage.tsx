@@ -66,7 +66,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    if (user?.school.name === "default") {
+    if (user?.schoolName === "default") {
       setModalSelectSchool(true);
     }
   }, [user]);

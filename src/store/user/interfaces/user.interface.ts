@@ -19,4 +19,5 @@ export interface User{
     parentEmail?:string;
     bookCode?:string;
     birthday?: string;
+    schoolName?:string;
 }

@@ -15,4 +15,5 @@ export interface Student {
   registerCode: string;
   profileImg?: string;
   birthday?: string;
+  schoolName?: string;
 }

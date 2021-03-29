@@ -14,4 +14,5 @@ export interface Teacher {
   registerCode: string;
   profileImg?: string;
   birthday?: string;
+  schoolName?: string;
 }
