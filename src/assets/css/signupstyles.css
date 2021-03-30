@@ -330,6 +330,9 @@ form input::placeholder{
         width: 100px;
         margin-top: 60px;
     }
+    .companyName .navImg{
+        margin-top: 0;
+    }
     .register-container{
         padding-top: 90px;
         padding-bottom: 30px;

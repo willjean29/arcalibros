@@ -151,7 +151,7 @@ const Home = () => {
         <ModalSelectSchool setModalOpen={setModalSelectSchool} />
       </Modal>
       <div className="menu-container">
-        <SideBar />
+        {/* <SideBar /> */}
 
         <div className="dashboard">
           {/* <ToastContainer limit={1} /> */}

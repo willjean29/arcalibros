@@ -107,14 +107,18 @@ form input::placeholder{
 }
 .btn-login{
     font-size: 1.2rem;
-    background-color: #7950AE;
+    background-color: #1da546;
     color: #FFF;
     width: 200px;
-    height: 40px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     margin: 12px 0px;
+    padding: 10px;
+    padding-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .form-login .btn-recover-password{
     border: none;

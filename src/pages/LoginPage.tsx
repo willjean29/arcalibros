@@ -8,7 +8,7 @@ import React, {
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory, useLocation } from "react-router-dom";
 
-import userImage from "../assets/images/user-color.png";
+import imgLogo from "../assets/images/logo1.png";
 import LoginError from "../components/login/LoginError";
 import LoginNav from "../components/login/LoginNav";
 import UserImg from "../components/login/UserImg";
@@ -91,7 +91,7 @@ const LoginPage = () => {
       <div className="login-container">
         <div className="login-form-container">
           <div className="image-user">
-            <UserImg userImage={userImage} />
+            <UserImg userImage={imgLogo} />
           </div>
           <form onSubmit={handleLogin}>
             <div className="alert alert-danger">

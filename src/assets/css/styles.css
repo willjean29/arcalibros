@@ -4692,7 +4692,7 @@ font-size: 1.05em;
   .menu-container {
     width: 100%;
     margin: auto;
-    padding-left: 300px;
+    /* padding-left: 300px; */
     padding-top: 15px;
   }
   /* STREAMMING */
@@ -4902,7 +4902,7 @@ font-size: 1.05em;
   .menu-container {
     width: 100%;
     margin: auto;
-    padding-left: 280px;
+    /* padding-left: 280px; */
     gap: 10px;
     grid-template-columns: 10fr;
   }
@@ -5289,9 +5289,9 @@ font-size: 1.05em;
   }
 
   /*SIDEMENU*/
-  #btnMenu {
+  /* #btnMenu {
     display: flex;
-  }
+  } */
   .side-menu {
     display: none;
   }
@@ -6229,7 +6229,7 @@ font-size: 1.05em;
     font-size: 0.8em;
   }
   .nav-home .right-content img {
-    width: 80px;
+    /* width: 80px; */
   }
   #btnMenu img {
     width: 25px;

@@ -75,7 +75,7 @@ const NavBar = () => {
           </button>
           <div className="companyName" onClick={() => setMenu(true)}>
             <Link to="/plataforma">
-              <img src={logoArca} alt=""></img>
+              <img className="navImg" src={logoArca} alt=""></img>
             </Link>
           </div>
         </div>
@@ -112,7 +112,7 @@ const NavBar = () => {
         </button>
       </nav>
 
-      <div
+      {/* <div
         className={
           menu === true
             ? "sidebar-responsive-ang"
@@ -121,7 +121,7 @@ const NavBar = () => {
       >
         <div className="menu-overlay" onClick={() => setMenu(!menu)} />
         <SideBar setSidebarOpen={setMenu} />
-      </div>
+      </div> */}
     </>
   );
 };
