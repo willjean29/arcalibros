@@ -74,7 +74,7 @@ const NavBar = () => {
             <img src={imgMenu} alt="" />
           </button>
           <div className="companyName" onClick={() => setMenu(true)}>
-            <Link to="/plataforma">
+            <Link to="/plataforma/libros">
               <img className="navImg" src={logoArca} alt=""></img>
             </Link>
           </div>
