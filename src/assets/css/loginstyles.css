@@ -38,6 +38,7 @@ nav{
 .login-form-container{
     display: grid;
     justify-items: center;
+    margin-top: 50px;
 }
 .image-user img{
     width: 140px;
