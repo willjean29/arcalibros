@@ -12,19 +12,18 @@ import imgSupport from "../../assets/icons/support.svg";
 import imgLogOut from "../../assets/icons/logout.svg";
 import imgHelpUs from "../../assets/icons/helpus.svg";
 import imgFacebook from "../../assets/images/facebook-icon.png";
-import imgTwiter from "../../assets/images/twitter-icon.png";
+import imgTwiter from "../../assets/images/tasks.png";
 import imgInstagram from "../../assets/images/instagram-icon.png";
 import imgArrowRight from "../../assets/icons/arrow-right.svg";
 import { socket } from "../../utils/sockets";
 import { Student } from "../../store/user/interfaces/student.interface";
 import { Teacher } from "../../store/user/interfaces/teacher.interface";
 
-
 interface Props {
   setDropdownOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-const UserDropdown: React.FC<Props> = ({setDropdownOpen}) => {
+const UserDropdown: React.FC<Props> = ({ setDropdownOpen }) => {
   const dispatch = useDispatch();
   const user = useSelector((state: RootStore) => state.user.user) as
     | Teacher
@@ -41,11 +40,11 @@ const UserDropdown: React.FC<Props> = ({setDropdownOpen}) => {
   };
   const closeDropdown = () => {
     setDropdownOpen(false);
-  }
+  };
 
   return (
     <div className="drop-down-user">
-    {/*  <div className="dw-user-profile">
+      {/*  <div className="dw-user-profile">
         <div className="image">
           <img src={profileImg !== "default" ? profileImg : imgUser} alt="" />
         </div>
@@ -59,8 +58,10 @@ const UserDropdown: React.FC<Props> = ({setDropdownOpen}) => {
         </div>
       </div>
      <hr />*/}
-       <a
-        href="mailto:soporteplataforma@arcadepapel.net"
+      <a
+        href="https://www.facebook.com/ArielEditorial"
+        target="_blank"
+        rel="noopener noreferrer"
         onClick={closeDropdown}
         className="dw-item border-top color-light-grey"
       >
@@ -78,25 +79,9 @@ const UserDropdown: React.FC<Props> = ({setDropdownOpen}) => {
       </a>
       <hr />
       <a
-        href="mailto:soporteplataforma@arcadepapel.net"
-        onClick={closeDropdown}
-        className="dw-item border-top color-light-grey"
-      >
-        <div className="right-dropdown">
-          <div className="circle-container">
-            <img src={imgTwiter} alt="" />
-          </div>
-          <div className="text-dropdown">
-            <h3 className="title">Twitter</h3>
-            {/* <p className="helpUs">
-              Ayúdanos a mejorar la nueva versión de Arca virtual.
-            </p> */}
-          </div>
-        </div>
-      </a>
-      <hr />
-      <a
-        href="mailto:soporteplataforma@arcadepapel.net"
+        href="https://www.instagram.com/RevistaKrear/"
+        target="_blank"
+        rel="noopener noreferrer"
         onClick={closeDropdown}
         className="dw-item border-top color-light-grey"
       >
@@ -113,7 +98,27 @@ const UserDropdown: React.FC<Props> = ({setDropdownOpen}) => {
         </div>
       </a>
       <hr />
-     {/* <Link
+      <a
+        href="https://recursos.arcavirtual.net/"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={closeDropdown}
+        className="dw-item border-top color-light-grey"
+      >
+        <div className="right-dropdown">
+          <div className="circle-container">
+            <img src={imgTwiter} alt="" />
+          </div>
+          <div className="text-dropdown">
+            <h3 className="title">Recursos</h3>
+            {/* <p className="helpUs">
+              Ayúdanos a mejorar la nueva versión de Arca virtual.
+            </p> */}
+          </div>
+        </div>
+      </a>
+      <hr />
+      {/* <Link
         to="/plataforma/ajustes"
         onClick={closeDropdown}
         className="dw-item border-top color-light-grey"
