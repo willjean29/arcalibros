@@ -167,6 +167,7 @@ form input::placeholder{
     }
     .companyName img{
         width: 60px;
+        display: none;
     }
     .login-container{
         padding-top: 90px;
