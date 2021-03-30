@@ -1,12 +1,12 @@
 {
-  "name": "Arca virtual",
-  "short_name": "Arca virtual",
+  "name": "Arielonline - Plataforma de libros",
+  "short_name": "Arielonline - Plataforma de libros",
   "theme_color": "#33497c",
   "background_color": "#ffffff",
   "display": "standalone",
   "scope": ".",
   "start_url": ".",
-  "categories": ["editorial", "educación", "libros", "plataforma", "arca virtual"],
+  "categories": ["editorial", "educación", "libros", "plataforma", "Arielonline", "Plataforma de libros"],
   "icons": [
     {
       "src": "favicon.ico",
